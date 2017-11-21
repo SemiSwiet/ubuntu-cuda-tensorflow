@@ -1,4 +1,4 @@
-# ubuntu 16.04.2 LTS + cuda 8.0 + cudnn v6.0 + tensorflow installation guide
+# ubuntu 16.04.2 LTS + cuda 9.0 + cudnn v6.0 + tensorflow installation guide
 ### windows10 + ubuntu 16.04.2 dual boot installtion see http://www.jianshu.com/p/2eebd6ad284d.  
 **Note:**  
 * Disable fast boot and secure boot (Bios -> boot -> secure boot -> key management -> clear key)   
@@ -6,14 +6,14 @@
 * Don't use EasyBCD  
 * Disable ubuntu update (System Settings -> Software & Updates -> Updates -> Notify me of a new Ubuntu version: Never)
   
-### cuda 8.0 + cudnn v6.0 installtion see http://blog.csdn.net/autocyz/article/details/52299889.  
+### cuda 9.0 + cudnn v6.0 installtion see http://blog.csdn.net/autocyz/article/details/52299889.  
 * **Install nvidia driver**  
   1. Check your driver on http://www.nvidia.com/Download/index.aspx?lang=en-us  
   2. Open a terminal and type: 
      ```
      sudo add-apt-repository ppa:graphics-drivers/ppa  
      sudo apt-get update  
-     sudo apt-get install nvidia-375 #your driver  
+     sudo apt-get install nvidia-384 #your driver version number  
      sudo apt-get install mesa-common-dev  
      sudo apt-get install freeglut3-dev  
      sudo reboot    
@@ -23,7 +23,7 @@
 * **Install cuda**  
   1. Download cuda from https://developer.nvidia.com/cuda-release-candidate-download  
      ```
-     sudo sh cuda_8.0.27_linux.run #your cuda runfile name
+     sudo sh cuda_9.0.103_384.59_linux.run #your cuda runfile name
      ```
      **Select no when prompted to install graphics driver!**
   2. Set environment variables
