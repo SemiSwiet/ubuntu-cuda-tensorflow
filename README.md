@@ -1,4 +1,4 @@
-# ubuntu 16.04.2 LTS + cuda 9.0 + cudnn v6.0 + tensorflow installation guide
+# ubuntu 16.04.2 LTS + cuda 9.0 + cudnn v7.0.4 + tensorflow installation guide
 ### windows10 + ubuntu 16.04.2 dual boot installtion see http://www.jianshu.com/p/2eebd6ad284d.  
 **Note:**  
 * Disable fast boot and secure boot (Bios -> boot -> secure boot -> key management -> clear key)   
@@ -68,8 +68,10 @@
       sudo cp cudnn.h /usr/local/cuda/include/  
       cd ~/Downloads/cuda/lib64/  
       sudo cp lib* /usr/local/cuda/lib64/    
-      cd /usr/local/cuda/lib64/  
-      sudo ln -s libcudnn.so.6.* libcudnn.so.5  
+      cd /usr/local/cuda/lib64/ 
+      sudo rm -rf libcudnn.so libcudnn.so.7        #remove these two file
+      sudo ln -s libcudnn.so.7.0.4 libcudnn.so.7   #create soft link
+      sudo ln -s libcudnn.so.7 libcudnn.so         #create soft link
       ```  
 * **Install tensorflow see https://www.tensorflow.org/install/install_linux** 
   1. ```sudo apt-get install libcupti-dev```
