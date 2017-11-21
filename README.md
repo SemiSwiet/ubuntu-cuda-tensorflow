@@ -69,7 +69,7 @@
       cd ~/Downloads/cuda/lib64/  
       sudo cp lib* /usr/local/cuda/lib64/    
       cd /usr/local/cuda/lib64/ 
-      sudo rm -rf libcudnn.so libcudnn.so.7        #remove these two file
+      sudo rm -rf libcudnn.so libcudnn.so.7        #remove these two files
       sudo ln -s libcudnn.so.7.0.4 libcudnn.so.7   #create soft link
       sudo ln -s libcudnn.so.7 libcudnn.so         #create soft link
       ```  
