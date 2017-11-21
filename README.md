@@ -25,7 +25,7 @@
      ```
      sudo sh cuda_9.0.103_384.59_linux.run #your cuda runfile name
      ```
-     **Select no when prompted to install graphics driver!**
+     **Select no when it askes you whether you need to install (old version) graphics driver!**
   2. Set environment variables
      ```
      cd /etc/profile.d
@@ -56,7 +56,7 @@
      ```  
   3. Test cuda samples:  
      ```
-     cd /usr/local/cuda-7.5/samples/1_Utilities/deviceQuery  
+     cd /your own path/NVIDIA_CUDA-9.0_Samples/1_Utilities/deviceQuery  
      sudo make  
      sudo ./deviceQuery  
      ```  
